@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum - Astronom&iacute;a</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="styles/space.css">
+    <style>
+        header {
+            background: url(src/astronomy-space.jpg);
+            background-size: cover; /* Ajusta la imagen para que cubra todo el encabezado */
+            background-position: center; /* Centra la imagen en el encabezado */
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Espacio de Astronom&iacute;a</h1>
+        <p>Bienvenido/a al espacio de f&iacute;sica de Quantum. Explora y aprende.</p>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="#introduccion">Introducci&oacute;n</a></li>
+            <li><a href="#libros">Libros</a></li>
+            <li><a href="#canales">Canales</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducci&oacute;n</h2>
+            <p>La Astronom&iacute;a es una disciplina cient&iacute;fica que se dedica al estudio de los objetos celestes,
+                como estrellas, planetas, galaxias y otros cuerpos celestes. Esta ciencia busca comprender el universo, 
+                su origen, evoluci&oacute;n y funcionamiento, utilizando observaciones y teor&iacute;as f&iacute;sicas.</p>
+        
+            <p>En Quantum, valoramos la Astronom&iacute;a como una de las ciencias m&aacute;s antiguas y fascinantes. 
+                La exploraci&oacute;n del espacio y la comprensi&oacute;n de los fen&oacute;menos astron&oacute;micos 
+                son fundamentales para nuestra comprensi&oacute;n del cosmos.</p>
+        </section>
+        
+        
+        <section id="libros">
+            
+            <div class="active">
+                <button class="accordion">
+                    <h2>Libros</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+
+                    <div class="book">
+                        <img src="books/astronomy/4Fuerzas/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>Las 4 Fuerzas que rigen el Universo</h3>
+                            <p>Categoría: Astronom&iacute;a</p>
+                            <p>Creador: Jordi Pereyra</p>
+                            <a href="books/chemistry/CuestionDeQuimica/Todo es cuestion de quimica - Deborah Garcia Bello.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="book">
+                        <img src="books/astronomy/TeoriaFinal/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>El Sue&ntilde;o de una Teor&iacute; Final</h3>
+                            <p>Categor&iacute;a: Astronom&iacute;a</p>
+                            <p>Creador: Steven Weinberg</p>
+                            <a href="books/astronomy/TeoriaFinal/El Sueño de Una Teoría Final.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="book">
+                        <img src="books/astronomy/Origen/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>El Origen del Universo</h3>
+                            <p>Categor&iacute;a: Astronom&iacute;a</p>
+                            <p>Creador: <br>Francisco Mart&iacute;nez Navarro 
+                            <br> Juan Carlos Tur&eacute;gano Garc&iacute;a</p>
+                            <a href="books/astronomy/Origen/El origen del universo.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section>
+
+        <section id="canales">
+            <div class="active">
+                <button class="accordion">
+                    <h2>Canales</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="pannel">
+                    <div class="pannel-container">
+                        <h3>Astronomiaweb</h3>
+                        <p>Astronomiaweb es un canal creado por Juanjo, con este canal te enterar&acute;s 
+                        de noticias sobre la astronom&iacute;a en general.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/CKHWvanTXYw?si=59RaTVWyEClzYBmy" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const nav = document.querySelector('nav');
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+    
+        window.addEventListener('scroll', function () {
+            if (window.scrollY >= headerHeight) {
+                nav.style.position = 'fixed';
+                nav.style.top = '0';
+            } else {
+                nav.style.position = 'absolute';
+                nav.style.top = `${headerHeight}px`;
+            }
+        });
+
+
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function
+            (){
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                    pannel.style.display = "none";
+                }else{
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

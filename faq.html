@@ -1,0 +1,92 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum - FAQ</title>
+    <link rel="stylesheet" href="styles/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Preguntas Frecuentes</h1>
+
+        <div class="faq active">
+            <button class="accordion">
+                ¿Por qu&eacute; se llama Quantum?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>
+                    La palabra Quantum viene del latín quantus que significa cantidad, 
+                    en física cuántica un cuanto o quantum puede entenderse como la 
+                    cantidad mínima de energía que pude emitirse, propagarse o ser absorbida 
+                    a través de una longitud de onda. El creador de este sitio pens&oacute;
+                    en esta palabra de primero, y probablemente se quede as&iacute;.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="faq">
+            <button class="accordion">
+                ¿En qu&eacute; se inspir&oacute; Quantum?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>La idea de Quantum est&aacute; muy inspirada en Quora. 
+                    Quora es de la misma naturaleza que Quantum: Responder preguntas tanto preguntar.
+                    En Quora se abarca todas las &aacute;reas del saber, mientras que en Quantum
+                    enfatiza m&aacute;s que nada en la ciencia.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <button class="accordion">
+                ¿En qu&eacute; se inspir&oacute; Quantum?
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="pannel">
+                <p>Sed eleifend nisl eu magna condimentum fermentum. 
+                    Maecenas ultricies mi in lacus ullamcorper, sit amet mollis sem accumsan.
+                    Aliquam blandit, risus eget blandit venenatis, mauris sem semper nibh,
+                    quis porta lacus turpis non metus.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function
+            (){
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                    pannel.style.display = "none";
+                }else{
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

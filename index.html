@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Quantum - PSU</title>
+    <link rel="stylesheet" href="styles/psu.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta+Vaani%3A400"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin%3A400"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- NAVBAR CREATION -->
+   <header class="header">
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="about-us.html">Sobre Quantum</a>
+        <a href="contacto.html">Contact&aacute;nos</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+   </header>
+    <!-- LOGIN FORM CREATION -->
+    <div id="hero" class="background">
+        <video muted autoplay loop>
+            <source src="src/background.mp4"
+            type="video/mp4">
+        </video>
+    </div>
+    <div class="capa"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"></i>Quantum</h2>
+            <p>Bienvenido/a sea a Quantum. 
+                Esta es una plataforma en donde se comparten conocimientos de 
+                F&iacute;sica, Qu&iacute;mica, Matem&aacute;ticas, Astronom&iacute;a 
+                y diversas ramas de la ciencia. Todo esto a trav&eacute;s de preguntas por parte de
+                los curiosos y respuestas de los expertos. Quantum tambi&eacute;n es un ba&uacute;l de conocimientos
+                ya que posee diversos libros y materiales en donde se puede estudiar la mayor parte de
+                campos cient&iacute;ficos. Quantum es para ense&ntilde;ar y para aprender
+                &iexcl;Recomendamos iniciar sesi&oacute;n!</p>
+            <div class="text-item">
+                <p>S&iacute;guenos en nuestras redes sociales:</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-discord'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="login-session.php" method="post">
+                    <h2>Iniciar Sesi&oacute;n</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" name="email" id="email" required>
+                        <label >Correo Electr&oacute;nico</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" name="password" id="password" required>
+                        <label>Contrase&ntilde;a</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Recu&eacute;rdame</label>
+                        <a href="#"> &iquest;Olvidaste tu contrase&ntilde;a?</a>
+                    </div>
+                    <button class="btn">Iniciar Sesi&oacute;n</button>
+                    <div class="create-account">
+                        <p>&iquest;No tienes una cuenta? <a href="#" class="register-link">Reg&iacute;strate</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box register">
+                <form action="register.php" method="post">
+
+                    <h2>Registro</h2>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" id="username" name="username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id="email" name="email" required>
+                        <label>Correo Electr&oacute;nico</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                        <input type="password" name="password" required>
+                        <label>Contrase&ntilde;a</label>
+                    </div>
+                                   
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Estoy de acuerdo con los t&eacute;rminos y condiciones</label>
+                    </div>
+                    <button class="btn" id="register-button">Registrarse</button>
+                    <div class="create-account">
+                        <p> &iquest;Ya tienes una cuenta? <a href="#" class="login-link">Inicia Sesi&oacute;n</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+     <!-- SIGN UP FORM CREATION -->
+
+    <script>
+        const loginsec=document.querySelector('.login-section')
+        const loginlink=document.querySelector('.login-link')
+        const registerlink=document.querySelector('.register-link')
+        registerlink.addEventListener('click',()=>{
+            loginsec.classList.add('active')
+        })
+        loginlink.addEventListener('click',()=>{
+            loginsec.classList.remove('active')
+        })
+
+
+        document.getElementById("register-button").addEventListener("click", function() {
+        // Obtener el valor del nombre de usuario
+        var username = document.getElementById("username").value;
+
+        // Guardar el nombre de usuario en localStorage para su uso posterior
+        localStorage.setItem("username", username);
+        });
+
+    </script>
+</body>
+
+</html>

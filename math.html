@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum - Matem&aacute;ticas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="styles/space.css">
+
+    <style>
+        header {
+            background: url(src/math-space.jpg);
+            background-size: cover; /* Ajusta la imagen para que cubra todo el encabezado */
+            background-position: center; /* Centra la imagen en el encabezado */
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Espacio de Matem&aacute;ticas</h1>
+        <p>Bienvenido/a al espacio de matem&aacute;ticas de Quantum. Explora y aprende.</p>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="#introduccion">Introducci&oacute;n</a></li>
+            <li><a href="#libros">Libros</a></li>
+            <li><a href="#canales">Canales</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducci&oacute;n</h2>
+            <p>Las matemáticas son una disciplina fundamental que se ocupa del estudio de las
+            propiedades y las relaciones de los números, las figuras geométricas y los objetos abstractos. 
+            Se considera una ciencia exacta que desempeña un papel crucial en diversas áreas de la ciencia 
+            y la tecnología.<br><br>En <strong>Quantum</strong>, consideramos las matem&aacute;ticas como el pilar de
+            absolutamente todo &iexcl;Por algo est&aacute;s en este sitio a trav&eacute;s de internet!</p>
+                
+            <div>
+                <h3>&iquest;Qu&eacute; se espera encontrar ac&aacute;?</h3>
+                <p>En este espacio se espera encontrar una pequeña biblioteca de libros para descargar
+                    completamente gratis y diversos canales de YouTube espec&iacute;ficamente sobre las mates.
+                </p>
+            </div>
+        </section>
+
+        <section id="libros">
+            
+            <div class="active">
+                <button class="accordion">
+                    <h2>Libros</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+
+                    <div class="book">
+                        <img src="books/math/17 Ecuaciones/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>17 Ecuaciones Que Cambiaron El Mundo</h3>
+                            <p>Categoría: Matem&aacute;ticas</p>
+                            <p>Creador: Ian Stewart</p>
+                            <a href="books/math/17 Ecuaciones/17 ecuaciones que cambiaron el mundo - Ian Stewart.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="book">
+                        <img src="books/math/Pitagoras/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>El Teorema de Pit&aacute;goras</h3>
+                            <p>Categor&iacute;a: Geometr&iacute;a</p>
+                            <p>Creador: National Geographic</p>
+                            <a href="books/math/Pitagoras/13gic-pitagoras.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="book">
+                        <img src="books/math/Enigma de Fermat/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>El Enigma de Fermat</h3>
+                            <p>Categoría: Matem&aacute;ticas</p>
+                            <p>Creador: Simon Singh</p>
+                            <a href="books/math/Enigma de Fermat/El Enigma de Fermat - Simon Singh.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="canales">
+            <div class="active">
+                <button class="accordion">
+                    <h2>Canales</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="pannel">
+                    <div class="pannel-container">
+                        <h3>El Rinc&oacute;n de Los Teoremas</h3>
+                        <p>Este canal es demasiado nuevo, sin embargo posee un v&iacute;deo muy interesante.
+                            Especialmente para los nerds que juegan al Minecraft.
+                        </p>
+                        <iframe width="560" height="315" 
+                        src="https://www.youtube.com/embed/fuWLFfiIU-I?si=iMHeQ0PzS3uH4jji" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                        picture-in-picture; web-share" 
+                        allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const nav = document.querySelector('nav');
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+    
+        window.addEventListener('scroll', function () {
+            if (window.scrollY >= headerHeight) {
+                nav.style.position = 'fixed';
+                nav.style.top = '0';
+            } else {
+                nav.style.position = 'absolute';
+                nav.style.top = `${headerHeight}px`;
+            }
+        });
+
+
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function
+            (){
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                    pannel.style.display = "none";
+                }else{
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

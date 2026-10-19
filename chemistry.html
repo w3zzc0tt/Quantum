@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum - Qu&iacute;mica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="styles/space.css">
+    <style>
+        header {
+            background: url(src/chemistry.jpg);
+            background-size: cover; /* Ajusta la imagen para que cubra todo el encabezado */
+            background-position: center; /* Centra la imagen en el encabezado */
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Espacio de Qu&iacute;mica</h1>
+        <p>Bienvenido/a al espacio de f&iacute;sica de Quantum. Explora y aprende.</p>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="home.php">Home</a></li>
+            <li><a href="#introduccion">Introducci&oacute;n</a></li>
+            <li><a href="#libros">Libros</a></li>
+            <li><a href="#canales">Canales</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducci&oacute;n</h2>
+            <p>La Qu&iacute;mica es una disciplina fundamental que se centra en el estudio de la 
+            composici&oacute;n, estructura, propiedades y cambios de la materia. Esta ciencia desempe&ntilde;a 
+            un papel crucial en la comprensi&oacute;n de los elementos que componen nuestro mundo y c&oacute;mo 
+            interact&uacute;an entre s&iacute; en reacciones qu&iacute;micas.</p>
+        
+            <p>En <strong>Quantum</strong>, reconocemos la importancia de la Qu&iacute;mica como un pilar fundamental en la ciencia y la tecnolog&iacute;a.
+            La Qu&iacute;mica es la base de numerosos avances en la medicina, la industria, la energ&iacute;a y la tecnolog&iacute;a</p>
+        </section>
+        
+        <section id="libros">
+            
+            <div class="active">
+                <button class="accordion">
+                    <h2>Libros</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="pannel">
+
+                    <div class="book">
+                        <img src="books/chemistry/CuestionDeQuimica/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>Todo es cuesti&oacute;n de Qu&iacute;mica</h3>
+                            <p>Categoría: Qu&iacute;mica</p>
+                            <p>Creador: Deborah Garcia Bello</p>
+                            <a href="books/chemistry/CuestionDeQuimica/Todo es cuestion de quimica - Deborah Garcia Bello.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="book">
+                        <img src="books/chemistry/HistoriaDeLaQuimica/portada.png" alt="Portada del Libro 1">
+                        <div class="book-info">
+                            <h3>Breve Historia de la Qu&iacute;mica</h3>
+                            <p>Categor&iacute;a: Qu&iacute;mica</p>
+                            <p>Creador: Isaac Asimov</p>
+                            <a href="books/chemistry/HistoriaDeLaQuimica/Isaac-Asimov-Breve-Historia-de-la-Quimica.pdf" download class="download-button">Descargar</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="canales">
+            <div class="active">
+                <button class="accordion">
+                    <h2>Canales</h2>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+
+                <div class="pannel">
+                    <div class="pannel-container">
+                        <h3>El Robot de Plat&oacute;n</h3>
+                        <p>Creado por Aldo Bartra, "El Robot de Plat&oacute;n" es un canal que trata de ciencia en general,
+                        incluyendo tambi&eacute;n la qu&iacute;mica.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BJXh1NdAho8?si=BuH1lPDHpsPuVUZx" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                        gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const nav = document.querySelector('nav');
+        const header = document.querySelector('header');
+        const headerHeight = header.offsetHeight;
+    
+        window.addEventListener('scroll', function () {
+            if (window.scrollY >= headerHeight) {
+                nav.style.position = 'fixed';
+                nav.style.top = '0';
+            } else {
+                nav.style.position = 'absolute';
+                nav.style.top = `${headerHeight}px`;
+            }
+        });
+
+
+        var acc = document.getElementsByClassName
+        ("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++){
+            acc[i].addEventListener("click", function
+            (){
+                this.classList.toggle("active");
+                this.parentElement.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if(pannel.style.display === "block"){
+                    pannel.style.display = "none";
+                }else{
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>

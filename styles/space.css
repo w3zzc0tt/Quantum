@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    padding: 0%;
+    margin: 0%;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    transition: none;
+    z-index: 1000;
+    position: fixed;
+    background-color: black;
+}
+
+nav.active {
+    background: #333; /* Fondo oscuro */
+    padding: 15px;
+}
+
+nav.active,
+nav.active .menu a {
+    color: #fff; /* Texto blanco */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.menu li a:hover {
+    padding: 5px 10px;
+    background: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    border-radius: 15px;
+}
+
+#introduccion {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+    text-align: center;
+}
+
+#introduccion h2 {
+    font-size: 36px;
+    margin: 0;
+}
+
+#introduccion p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+#introduccion strong {
+    font-weight: bold;
+}
+
+#introduccion h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Para evitar que el contenido se solape con el menú */
+}
+
+.container > p,
+.container > h1{
+    margin: 1.5rem 0;
+    text-align: center;
+
+}
+
+.container > h1{
+    letter-spacing: 3px;
+}
+
+.accordion{
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.accordion i{
+    font-size: 1.6rem;
+}
+
+.active, 
+.accordion:hover{
+    background-color: #f5f5f5;
+}
+
+.pannel{
+    padding: 0.2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color: #faf9f9;
+    display: none;
+}
+
+.pannel p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.faq{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.active{
+    border: none;
+}
+
+.book {
+    background-color: #ffffff; /* Color de fondo para la clase "book" */
+    padding: 20px; /* Añade relleno para separar elementos en el libro */
+}
+
+.book-info {
+    margin-left: 20px; /* Espacio entre la imagen y la información del libro */
+}
+
+.download-button {
+    background-color: #000000; /* Color de fondo para el botón de descarga */
+    color: #fff; /* Texto blanco en el botón */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.download-button:hover {
+    background-color: #222222; /* Cambia el color al pasar el mouse */
+}
+
+.pannel-container {
+    padding: 20px; /* Espacio dentro del panel de canales */
+    background-color: #f5f5f5; /* Color de fondo para el panel */
+}
